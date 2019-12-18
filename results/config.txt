@@ -1,0 +1,7 @@
+LEARNING_RATE:       0.001
+BATCHNORM_MOMENTUM:  0.9
+BATCH_SIZE:          350
+NUM_OFFSETS:         1
+DROPOUT_RATE:        0.1
+num_songs:           118
+optimizer:           RMSprop
