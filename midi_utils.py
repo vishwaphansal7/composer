@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""
-Utils to read and write midi.
-"""
-
 from mido import MidiFile, MidiTrack, Message
 import numpy as np
 import params
