@@ -21,8 +21,8 @@ from keras.models import Model, load_model
 from keras import backend as K
 
 # User constants
-dir_name = 'results/history/'
-sub_dir_name = 'e2000/'
+dir_name = ''
+sub_dir_name = ''
 sample_rate = 48000
 note_dt = 2000  # num samples
 note_duration = 20000  # num samples
