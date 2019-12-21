@@ -26,10 +26,7 @@ autosavenum = 1
 autosavenow = False
 blend = False
 blendfactor = np.float32(1.0)
-#0 first sond 1 first to second 2 second song 3 second to first
 blendstate = 0
-
-# colors
 background_color = (210, 210, 210)
 edge_color = (60, 60, 60)
 slider_colors = [(90, 20, 20), (90, 90, 20), (20, 90, 20),
@@ -53,8 +50,6 @@ control_pad = 5
 control_num = 5
 control_colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (0, 255, 255), (255, 255, 0)]
 control_inits = [0.75, 0.5, 0.5, 0.5, 0.5]
-
-# derived constants
 notes_w = notes_cols * (note_w + note_pad * 2)
 notes_h = notes_rows * (note_h + note_pad * 2)
 sliders_w = notes_w
@@ -74,8 +69,6 @@ sliders_x = slider_pad
 sliders_y = slider_pad
 controls_x = int((window_w - controls_w) / 2)
 controls_y = notes_h + sliders_h
-
-# global variables
 keyframe_paths = np.array(("song 1.txt", "song 2.txt", ))
 prev_mouse_pos = None
 mouse_pressed = 0
@@ -93,8 +86,6 @@ keyframe_controls = np.zeros((len(keyframe_paths),len(cur_controls)),dtype=np.fl
 blend_slerp = False
 keyframe_magnitudes = np.zeros((len(keyframe_paths),),dtype=np.float32)
 songs_loaded = False
-
-# setup audio stream
 audio = pyaudio.PyAudio()
 audio_notes = []
 audio_time = 0
@@ -102,8 +93,6 @@ note_time = 0
 note_time_dt = 0
 audio_reset = False
 audio_pause = False
-
-
 def audio_callback(in_data, frame_count, time_info, status):
     """
     Audio call-back to influence playback of music with input.
