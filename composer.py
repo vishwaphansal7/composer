@@ -1,14 +1,11 @@
 import argparse
 import math
 import wave
-
 import numpy as np
 import pyaudio
 import pygame
 import params
-
 import midi_utils
-
 import keras
 from keras.models import Model, load_model
 from keras import backend as K
