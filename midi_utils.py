@@ -1,8 +1,6 @@
 from mido import MidiFile, MidiTrack, Message
 import numpy as np
 import params
-
-
 def midi_to_samples(file_name, num_notes=96, samples_per_measure=96):
     """
     Turn a midi file into a sample.
@@ -112,12 +110,7 @@ def midi_to_samples(file_name, num_notes=96, samples_per_measure=96):
                 while start_ix < end_ix:
                     sample[start_ix, int(note)] = vel / maxVol if params.encode_volume else 1
                     start_ix += 1
-            
-                
-
-    return samples
-
-
+            return samples
 def samples_to_midi(samples, file_name, threshold=0.5, num_notes=96, samples_per_measure=96):
     """
     Turn the samples/measures back into midi.
@@ -129,7 +122,6 @@ def samples_to_midi(samples, file_name, threshold=0.5, num_notes=96, samples_per
     :return:
     """
     # TODO: Encode the certainties of the notes into the volume of the midi for the notes that are above threshold
-
     mid = MidiFile()
     track = MidiTrack()
     mid.tracks.append(track)
@@ -139,7 +131,8 @@ def samples_to_midi(samples, file_name, threshold=0.5, num_notes=96, samples_per
     ticks_per_sample = ticks_per_measure / samples_per_measure
 
     # add instrument for track
-    # https://en.wikipedia.org/wiki/General_MIDI#Program_change_events
+    # https://en.wikipedia.org/wiki/General_MIDI
+    #Program_change_events
     piano = 1
     honky_tonk_piano = 4
     xylophone = 14
