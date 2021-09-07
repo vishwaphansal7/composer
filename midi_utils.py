@@ -2,6 +2,7 @@ from mido import MidiFile, MidiTrack, Message
 import numpy as np
 import params
 def midi_to_samples(file_name, num_notes=96, samples_per_measure=96):
+    
     """
     Turn a midi file into a sample.
     :param file_name:
@@ -9,6 +10,7 @@ def midi_to_samples(file_name, num_notes=96, samples_per_measure=96):
     :param samples_per_measure:
     :return:
     """
+    
     has_time_sig = False
     mid = MidiFile(file_name)
 
