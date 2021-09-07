@@ -9,6 +9,7 @@ import midi_utils
 import keras
 from keras.models import Model, load_model
 from keras import backend as K
+
 dir_name = ''
 sub_dir_name = ''
 sample_rate = 48000
